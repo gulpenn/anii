@@ -310,6 +310,13 @@ footer {
   color: #7b5568;
 }
 
+/* Hide decorative daisies only on pages with `.no-daisies` (homepage) */
+.no-daisies .hero::before,
+.no-daisies .hero::after {
+  content: none !important;
+  display: none !important;
+}
+
 @media (max-width: 800px) {
   .card-grid,
   .gallery-grid,
@@ -355,4 +362,27 @@ footer {
   .blockquote {
     font-size: 1.1rem;
   }
+}
+
+/* Audio toggle button */
+.audio-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.audio-toggle:focus {
+  outline: 3px solid rgba(255,255,255,0.35);
 }

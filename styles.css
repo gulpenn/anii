@@ -109,29 +109,6 @@ img {
   z-index: 1;
 }
 
-.hero::before {
-  content: "🌼   🌼\A  🌼      🌼\A   🌼 🌼   🌼";
-  position: absolute;
-  top: 30px;
-  left: 10px;
-  width: 220px;
-  white-space: pre;
-  font-size: 1.7rem;
-  color: rgba(255,255,255,0.95);
-  transform: rotate(-10deg);
-}
-
-.hero::after {
-  content: "   🌼 🌼\A 🌼   🌼  🌼\A   🌼  🌼 🌼";
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
-  width: 220px;
-  white-space: pre;
-  font-size: 1.7rem;
-  color: rgba(255,255,255,0.95);
-  transform: rotate(10deg);
-}
 
 .hero-content {
   max-width: 760px;

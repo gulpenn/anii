@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gülpen & Merve</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="burger" aria-label="Menüyü aç" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu" id="menu">
+      <a href="anilar.html">Anılar</a>
+      <a href="hayaller.html">Hayaller</a>
+      <a href="benimcektiklerim.html">Gülpen Beni Çekme</a>
+      <a href="mesaj.html">Mesaj</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Gülpen & Merve</p>
+        <h1>Şüphesiz çocukken tanışsaydık yine seni seçerdim</h1>
+        <p>
+          Bu sayfa, birlikte yaşadığımız güzel anları ve paylaştığımız özel anları bir araya getiriyor.
+        </p>
+        <div class="gallery-grid hero-gallery">
+          <img src="ilk/WhatsApp Image 2026-06-23 at 21.44.19.jpeg" alt="Fotoğraf 1" />
+          <img src="ilk/z.jpeg" alt="Fotoğraf 2" />
+        </div>
+        <a class="btn" href="anilar.html">Başla</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="anilar" class="panel">
+        <div class="section-title">
+          <p class="eyebrow">Anılar</p>
+          <h2>açma o şarkıyı anısı var</h2>
+        </div>
+      </section>
+
+      <section id="hayaller" class="panel alt">
+        <div class="section-title">
+          <p class="eyebrow">Hayaller</p>
+          <h2>Gidelim İbrahim, oraya da gidelim</h2>
+        </div>
+      </section>
+
+      <section id="mesaj" class="panel quote">
+        <blockquote>
+          “Çok fazla şeyim var ama onsuz hiçbir şeyim yokmuş.”
+        </blockquote>
+      </section>
+    </main>
+
+    <script>
+      const burger = document.querySelector('.burger');
+      const menu = document.querySelector('.menu');
+
+      burger.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        burger.classList.toggle('active', isOpen);
+        burger.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.querySelectorAll('.menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>
